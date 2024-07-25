@@ -1,0 +1,394 @@
+:root {
+    --red: #ff5555;
+    --orange: #fac7a5;
+    --yellow: #f3e8ac;
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #e4e1e1;
+    --blue: #0645AD;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: medium;
+}
+
+header {
+    background-color: var(--red);
+}
+
+.background {
+    background: linear-gradient(var(--orange), var(--yellow));
+}
+
+/* nav */
+.divHead {
+    color: var(--black);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--orange);
+    height: 3rem;
+}
+
+.navLinks a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--black);
+    align-self: center;
+}
+
+.navLinks a:hover {
+    color: var(--white);
+}
+
+/* section intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.intro::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/intro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    position: absolute;
+}
+
+.intro p {
+    font-family: "Playwrite AR", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2;
+    width: 50rem;
+    text-align: justify;
+    color: var(--white);
+    margin: 7rem 7rem 7rem 50rem;
+}
+
+/* section cursos */
+.cursos {
+    padding: 2rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cursos h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70rem;
+    align-self: center;
+    margin: 0 1rem 0 1rem !important;
+}
+
+th:first-of-type,
+td:first-of-type {
+    padding-left: 1rem;
+}
+
+tr {
+    font-size: x-large;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--grey);
+}
+
+tr:nth-child(even) {
+    background-color: var(--white);
+}
+
+th {
+    text-align: left;
+    font-size: xx-large;
+    background-color: var(--red);
+}
+
+td a {
+    text-decoration: none;
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+td a:hover {
+    color: var(--black);
+}
+
+/* section contacto */
+.contacto {
+    padding: 2rem 5rem 5rem 5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 4rem 4rem 3rem 4rem !important;
+    background-color: var(--grey);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+label[for="email"] {
+    margin-left: 0.5rem;
+}
+
+fieldset input {
+    width: 15rem;
+    margin-left: 0.5rem;
+}
+
+fieldset input[type="submit"] {
+    width: 8rem;
+    align-self: center;
+    margin-top: 2rem;
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+legend {
+    padding-top: 6rem !important;
+    font-size: xx-large;
+    margin: 0 !important;
+}
+
+textarea {
+    width: 30rem;
+    height: 10rem;
+    margin-top: 0.5rem !important;
+}
+
+/* footer */
+footer {
+    background-color: var(--red);
+    padding: 1rem;
+}
+
+footer .divHead p {
+    margin-left: 1rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* media querys */
+@media screen and (max-width: 1650px) {
+    .intro p {
+        font-size: 1.75rem;
+        width: 35rem;
+        margin: 7rem 15rem 7rem 40rem;
+    }
+
+    table {
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro p {
+        font-size: 1.4rem;
+        width: 25rem;
+        margin: 6rem 10rem 6rem 25rem;
+    }
+
+    table {
+        width: 40rem;
+    }
+
+    fieldset input {
+        width: 10rem;
+        margin-left: 0.5rem;
+    }
+
+    fieldset {
+        padding: 3rem 3rem 2rem 3rem !important;
+    }
+
+    fieldset div {
+        margin-top: -1rem;
+    }
+
+    textarea {
+        width: 25rem;
+        height: 7rem;
+        margin-top: 0.5rem !important;
+    }
+
+    fieldset input[type="submit"] {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .intro p {
+        font-size: 1rem;
+        width: 20rem;
+        margin: 5rem 10rem 5rem 20rem;
+        line-height: 1.5;
+    }
+
+    .cursos {
+        padding-bottom: 0;
+    }
+
+    .cursos h2,
+    legend {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 30rem;
+    }
+
+    th {
+        font-size: 1.5rem;
+    }
+
+    tr {
+        font-size: 1.25rem;
+    }
+
+    fieldset input {
+        width: 8rem;
+    }
+
+    fieldset {
+        padding: 2rem 2rem 1rem 2rem !important;
+    }
+
+    textarea {
+        width: 20rem;
+        height: 5rem;
+    }
+
+    fieldset input[type="submit"] {
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 1.4rem !important;
+    }
+
+    .intro p {
+        margin: 3rem 10rem 3rem 10rem;
+    }
+
+    table {
+        width: 20rem;
+    }
+
+    th {
+        font-size: 1.25rem;
+    }
+
+    tr {
+        font-size: 1rem;
+    }
+
+    .cursos h2,
+    legend {
+        font-size: 1.5rem;
+    }
+
+    table {
+        width: 25rem;
+    }
+
+    th {
+        font-size: 1.25rem;
+    }
+
+    tr {
+        font-size: 1rem;
+    }
+
+    fieldset input {
+        width: 15rem;
+        margin-left: 0;
+    }
+
+    fieldset div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    fieldset div input[type="text"] {
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        width: 15rem;
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem !important;
+    }
+
+    .intro p {
+        margin: 2rem 8rem 2rem 8rem;
+        line-height: 1;
+    }
+
+    table {
+        width: 23rem;
+    }
+
+    fieldset {
+        padding: 1.5rem 1.5rem 0.75rem 1.5rem !important;
+    }
+}
